@@ -1,2 +1,2 @@
 # Chatbot
-A deep learning chatbot responding as myself
+A deep learning intents based chatbot for deployment in portfolio website
