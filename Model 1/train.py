@@ -10,7 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 import pickle
 
 # data extraction 
-with open('intents.json') as file:
+with open('Model 1/intents.json') as file:
     data = json.load(file)
 
 training_sentences = []
@@ -60,15 +60,15 @@ model.summary()
 epochs = 500
 history = model.fit(padded_sequences, np.array(training_labels), epochs=epochs)
 
-model.save("chatbot_2")
-model.save("chatbot_2.h5")
+model.save("Model 1/chatbot_2")
+model.save("Model 1/chatbot_2.h5")
 
 # saving fitted tokenizer 
-with open('tokenizer.pickle', 'wb') as handle:
+with open('Model 1/tokenizer.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 # saving fitted label encoder 
-with open('label_encoder.pickle', 'wb') as ecn_file:
+with open('Model 1/label_encoder.pickle', 'wb') as ecn_file:
     pickle.dump(lbl_encoder, ecn_file, protocol=pickle.HIGHEST_PROTOCOL)
 
 

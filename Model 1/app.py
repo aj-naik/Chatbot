@@ -9,16 +9,16 @@ import pickle
 
 colorama.init()
 
-with open("intents.json") as file:
+with open("Model 1/intents.json") as file:
     data = json.load(file)
 
 def chat():
-    model = keras.models.load_model('chatbot_2')
+    model = keras.models.load_model('Model 1/chatbot_2')
 
-    with open('tokenizer.pickle', 'rb') as handle:
+    with open('Model 1/tokenizer.pickle', 'rb') as handle:
         tokenizer = pickle.load(handle)
 
-    with open ('label_encoder.pickle', 'rb') as enc:
+    with open ('Model 1/label_encoder.pickle', 'rb') as enc:
         lbl_encoder = pickle.load(enc)
 
     max_len = 20

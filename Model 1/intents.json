@@ -1,5 +1,6 @@
 {
-    "intents": [{
+    "intents": [
+        {
             "tag": "greeting",
             "patterns": [
                 "Hi",
@@ -9,12 +10,27 @@
                 "Hay",
                 "Knock knock"
             ],
-            "responses": ["Hello", "Hi", "Hi there", "Hola", "Hey there", "Heyya"]
+            "responses": [
+                "Hello",
+                "Hi",
+                "Hi there",
+                "Hola",
+                "Hey there",
+                "Heyya"
+            ]
         },
         {
             "tag": "goodbye",
-            "patterns": ["Bye", "See you later", "Goodbye"],
-            "responses": ["See you later", "Have a nice day", "Bye! Come back again"]
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later",
+                "Have a nice day",
+                "Bye! Come back again"
+            ]
         },
         {
             "tag": "thanks",
@@ -33,7 +49,11 @@
         },
         {
             "tag": "name",
-            "patterns": ["Who are you?", "What are you?", "Who you are?"],
+            "patterns": [
+                "Who are you?",
+                "What are you?",
+                "Who you are?"
+            ],
             "responses": [
                 "I'm Ajinkya's bot",
                 "I'm AJ. Well... A bot version of him",
@@ -41,10 +61,28 @@
             ]
         },
         {
+            "tag": "functions",
+            "patterns": [
+                "What do you do?",
+                "what can you do?",
+                "what are your functions?",
+                "what can i chat with you about?",
+                "what can i ask you?",
+                "what else can you do? "
+            ],
+            "responses": [
+                "You can ask me about my skills, future plans, goals, my hobbies, what i plan to learn next, general trivia like - favourite books, games, movies",
+                "I can guide you through my skills, future plans, goals, my hobbies, what i plan to learn next and if you would like; general trivia like - favourite books, games, movies",
+                "I can converse with you on my skills, future plans, goals, my hobbies, what i plan to learn next, general trivia like my favourite books, games, movies",
+                "You can chat with me regarding my skills, future plans, goals, my hobbies, what i plan to learn next, general trivia like - favourite books, games, movies",
+                "As a bot i can give information on Ajinkya particularly his skills, future plans, goals, hobbies, what's next in learning, general trivia like - favourite books, games, movies"
+            ]
+        },
+        {
             "tag": "about",
             "patterns": [
                 "Tell me about yourself",
-                "what do you do",
+                "what do you do currently?",
                 "what are you doing?",
                 "what's your current status?"
             ],
@@ -85,7 +123,8 @@
             "tag": "skills",
             "patterns": [
                 "what are your skills",
-                "what can you do",
+                "what is your skillset?",
+                "skills?",
                 "what technologies do you use?"
             ],
             "responses": [

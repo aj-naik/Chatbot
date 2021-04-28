@@ -6,12 +6,12 @@ import json
 import random
 from keras.models import load_model
 
-model = load_model('chatbot_model.h5')
+model = load_model('Model 2/chatbot_model.h5')
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
-words = pickle.load(open('words.pkl','rb'))
-classes = pickle.load(open('classes.pkl','rb'))
+intents = json.loads(open('Model 2/intents.json').read())
+words = pickle.load(open('Model 2/words.pkl','rb'))
+classes = pickle.load(open('Model 2/classes.pkl','rb'))
 
 def lemmatize_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -42,7 +42,7 @@ def predict_class(sentence, model):
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
-def getResponse(ints, intents_json):
+def get_response(ints, intents_json):
     tag = ints[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
@@ -53,11 +53,12 @@ def getResponse(ints, intents_json):
 
 def chatbot_response(text):
     ints = predict_class(text,model)
-    res = getResponse(ints, intents)
+    res = get_response(ints, intents)
     return res
 
 import tkinter
 from tkinter import *
+
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()
     EntryBox.delete("0.0",END)
