@@ -5,13 +5,15 @@ import numpy as np
 import json
 import random
 from keras.models import load_model
+import tkinter
+from tkinter import *
 
-model = load_model('Model 2/chatbot_model.h5')
+model = load_model('DL Model 2/chatbot_model.h5')
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('Model 2/intents.json').read())
-words = pickle.load(open('Model 2/words.pkl','rb'))
-classes = pickle.load(open('Model 2/classes.pkl','rb'))
+intents = json.loads(open('DL Model 2/intents.json').read())
+words = pickle.load(open('DL Model 2/words.pkl','rb'))
+classes = pickle.load(open('DL Model 2/classes.pkl','rb'))
 
 def lemmatize_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -56,8 +58,6 @@ def chatbot_response(text):
     res = get_response(ints, intents)
     return res
 
-import tkinter
-from tkinter import *
 
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()

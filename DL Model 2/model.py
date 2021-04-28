@@ -12,7 +12,7 @@ words = []
 classes = []
 documents = []
 remove_punct = ['?', '!']
-data_file = open('Model 2/intents.json').read()
+data_file = open('DL Model 2/intents.json').read()
 intents = json.loads(data_file)
 
 for intent in intents['intents']:
@@ -37,8 +37,8 @@ print(len(classes), "classes", classes)
 
 print(len(words), "Lemmatized words", words)
 
-pickle.dump(words,open('Model 2/words.pkl','wb'))
-pickle.dump(classes,open('Model 2/classes.pkl','wb'))
+pickle.dump(words,open('DL Model 2/words.pkl','wb'))
+pickle.dump(classes,open('DL Model 2/classes.pkl','wb'))
 
 training = []
 # Empty list for output
@@ -81,7 +81,7 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
-model.save('Model 2/chatbot_model.h5', hist)
+model.save('DL Model 2/chatbot_model.h5', hist)
 
 print('Model Created')
 
