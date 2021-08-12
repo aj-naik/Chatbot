@@ -11,6 +11,8 @@ In Model 2 using NLTK, the data is first extracted (patterns and tags), tokensis
 
 A chatbot gui (created using tkinter) is present in both models for testing purposes.
 
+Note :- Create and upload intents in the form of json before using
+
 # Using it:
 Run app.py from either models
 
